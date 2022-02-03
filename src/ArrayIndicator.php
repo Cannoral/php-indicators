@@ -225,6 +225,26 @@ class ArrayIndicator implements Indicator, ArrayAccess
         return $this->indicators->ema( $this, $period );
     }
 
+    public function macd( int $fastPeriod, int $slowPeriod, $signalPeriod ): ArrayIndicator
+    {
+        return $this->indicators->macd( $this, $fastPeriod, $slowPeriod, $signalPeriod );
+    }
+
+    public function bbands( int $timePeriod, float $nbDevUp, float $nbDevDn, int $mAType ): ArrayIndicator
+    {
+        return $this->indicators->bbands( $this, $timePeriod, $nbDevUp, $nbDevDn, $mAType );
+    }
+
+    public function rsi( int $period ): ArrayIndicator
+    {
+        return $this->indicators->rsi( $this, $period );
+    }
+
+    public function stochrsi(int $period ): ArrayIndicator
+    {
+        return $this->indicators->stochrsi( $this, $period );
+    }
+
     /**
      * Whether a offset exists
      * @link https://php.net/manual/en/arrayaccess.offsetexists.php

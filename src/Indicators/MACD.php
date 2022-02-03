@@ -24,7 +24,7 @@ class MACD extends ArrayIndicator
         $this->assertPeriodLess( $fastPeriod,  2 );
         $this->assertPeriodLess( $slowPeriod,  2 );
 
-        parent::__construct( array_values( trader_macd($indicator->toArray(), $fastPeriod, $slowPeriod, $signalPeriod)[0] ) );
+        parent::__construct( array_values( trader_macd($indicator->toArray(), $fastPeriod, $slowPeriod, $signalPeriod) ) );
     }
 
 }
